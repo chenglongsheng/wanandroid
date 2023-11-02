@@ -11,6 +11,7 @@ material = "1.9.0"
 constraintlayout = "2.1.4"
 retrofit = "2.9.0"
 okhttp = "4.11.0"
+lifecycle = "2.6.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -25,6 +26,11 @@ okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhtt
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 
+# lifecycle
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+
 [plugins]
 application = { id = "com.android.application", version.ref = "agp" }
 library = { id = "com.android.library", version.ref = "agp" }
@@ -34,4 +40,4 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 [bundles]
-
+lifecycle = ['lifecycle-runtime', 'lifecycle-livedata', 'lifecycle-viewmodel']
