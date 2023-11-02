@@ -1,9 +1,9 @@
-package com.buyehou.wanandroid.common
+package com.buyehou.wanandroid.network.model
 
 /**
- * @author buyehou
+ * @author Rosen
  */
-data class Result<T>(
+data class Response<T>(
     val data: T? = null,
     val errorCode: Int = 0,
     val errorMsg: String = ""
